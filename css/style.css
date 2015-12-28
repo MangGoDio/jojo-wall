@@ -1,0 +1,156 @@
+body,img,figure,figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "arial","NotionFont","Avenir","Avenir Next","Lato",sans-serif;
+}
+
+.shadow-low {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08),
+              0 2px 3px rgba(0,0,0,0.15);
+}
+
+.shadow-mid {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08),
+              0 6px 7px rgba(0,0,0,0.15);
+}
+
+.shadow-high {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08),
+              0 20px 30px rgba(0,0,0,0.2);
+}
+
+.wall {
+  width: 1200px;
+  height: 410px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+.wall .shadow {
+  position: absolute;
+}
+
+.wall .shadow-1 {
+  top: 24px;
+  left: 254px;
+  width: 240px;
+  height: 132px;
+}
+
+.wall .shadow-2 {
+  top: 78px;
+  left: 530px;
+  width: 223px;
+  height: 123px;
+}
+
+.wall .shadow-3 {
+  top: 11px;
+  left: 797px;
+  width: 322px;
+  height: 177px;
+}
+
+.wall .shadow-4 {
+  top: 240px;
+  left: 440px;
+  width: 173px;
+  height: 95px;
+}
+
+.wall .shadow-5 {
+  top: 254px;
+  left: 640px;
+  width: 251px;
+  height: 138px;
+}
+
+.wall .shadow-6 {
+  top: 66px;
+  left: 32px;
+  width: 190px;
+  height: 105px;
+}
+
+.wall .shadow-7 {
+  top: 206px;
+  left: 100px;
+  width: 317px;
+  height: 174px;
+}
+
+.wall .shadow-8 {
+  top: 224px;
+  left: 928px;
+  width: 226px;
+  height: 124px;
+}
+
+.shadow > figure {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  -webkit-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  -webkit-transition: box-shadow 200ms ease, -webkit-transform 200ms ease;
+  transition: box-shadow 200ms ease, -webkit-transform 200ms ease;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, box-shadow 200ms ease, -webkit-transform 200ms ease;
+}
+
+.shadow:hover > figure {
+  -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+          transform: translateY(-4px);
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.25),
+              0 24px 48px rgba(0, 0, 0, 0.25);
+}
+
+.shadow > figure > img {
+  width: 100%;
+  height: auto;
+  padding: 8% 8% 0;
+  border-radius: 3px;
+  pointer-events: none;
+  position: absolute;
+  top: -35%;
+  box-sizing: border-box;
+}
+
+.shadow > figcaption {
+  position: absolute;
+  top: -29px;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #666;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+  opacity: 0;
+}
+
+.shadow > figure:hover + figcaption {
+  opacity: 1;
+}
